@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
-
+gem 'activerecord-colored_log_subscriber'
 gem 'rspec-rails'
 gem 'guard-bundler'
 gem 'guard-rspec'
 gem 'factory_girl_rails'
+gem 'awesome_print'
 
 group :test do
   gem 'capybara'
+  gem 'launchy'
 end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<hr />
+<h1>Listing Cars</h1>
+  <thead>
+  <table border="1">
+      <tr>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Year</th>
+    <th>Price</th>
+    <th>Edit</th>
+    <th>Show</th>
+    <th>Destroy</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @cars.each do |car| %>
+    <tr>
+      <td><%= car.make %></td>
+      <td><%= car.model %></td>
+      <td><%= car.year %></td>
+      <td><%= car.price %></td>
+      <td><%= button_to 'Edit', edit_car_path(car), method: :get, :class => 'btn btn-success' %></td>
+      <td><%= button_to 'Show', car, method: :get, :class => 'btn btn-success' %></td>
+      <td><%= button_to 'Destroy', car,  method: :delete, :class => 'btn btn-success'%></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<h5>Add a new car to the Database:
+  <hr />
+<%= button_to 'New Car', new_car_path, method: :get, :class => 'btn btn-success' %>
+</h5>

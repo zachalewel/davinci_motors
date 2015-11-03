@@ -1,0 +1,45 @@
+<table border="1">
+  <tr>
+  <p>
+    <th>
+    <strong> Make:</strong>
+    </th>
+<td>
+  <%= @car.make %>
+</td>
+</p>
+  </tr>
+  <tr>
+<p>
+    <th>
+      <strong> Model:</strong>
+    </th>
+    <td>
+      <%= @car.model %>
+    </td>
+</p>
+  </tr>
+  <tr>
+<p>
+    <th>
+      <strong> Year:</strong>
+    </th>
+    <td>
+      <%= @car.year %>
+    </td>
+</p>
+  </tr>
+  <tr>
+<p>
+  <th>
+    <strong> Price:</strong>
+  </th>
+    <td>
+  <%= @car.price %>
+    </td>
+</p>
+  </tr>
+<td><%= button_to 'Home', root_path, method: :get, :class => 'btn btn-success' %></td>
+<td><%= button_to 'Edit', edit_car_path(@car), method: :get, :class => 'btn btn-success' %></td>
+<td><%= button_to 'Destroy', @car, method: :delete, :class => 'btn btn-success' %></td>
+</table>
